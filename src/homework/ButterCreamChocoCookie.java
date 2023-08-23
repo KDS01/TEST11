@@ -6,6 +6,7 @@ public class ButterCreamChocoCookie {
 	public int crystalcost = 15;
 	int lowestHP=100;
 	int highestHP =135;
+	double hitnum =0;
 	String cookieclass = "B";
 	String kr ;
 	String jp ;
@@ -29,7 +30,8 @@ public class ButterCreamChocoCookie {
 	public void cookieHP()
 	{
 
-		double HP = lowestHP + ((cookieLv-1)*4.375);
+		double maxHp = lowestHP + ((cookieLv-1)*4.375);
+		double nowHp= maxHp -(hitnum*40);
 	}
 	public void specialAbility() 
 	{
