@@ -35,7 +35,7 @@ public class StrawberryCookie {
 	{
 		System.out.println("Strawberry Cookie");
 	}
-	public void cookieHP()
+	public void cookieHp()
 	{
 		double maxHp = lowestHP + ((cookieLv-1)*4.375);
 		double nowHp= maxHp - (hitnum*40);
