@@ -15,7 +15,7 @@ public class Calculator implements CalcInterface {
 			System.out.println(CalcInterface.super.multi(nums));
 			break;
 		case "/" :
-			System.out.println(CalcInterface.super.div(nums));	
+
 }
 	}
 	public int calculate(String formula) {
