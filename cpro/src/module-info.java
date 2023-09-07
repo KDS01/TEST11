@@ -1,0 +1,3 @@
+module cpro {
+	exports cpro;
+}
