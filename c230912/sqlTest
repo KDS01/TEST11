@@ -489,4 +489,4 @@ SQL> insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby
 
 SQL> commit;
 
-커밋이 완료되었습니다.
+커밋이 완료되었습니다
