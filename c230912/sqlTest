@@ -485,8 +485,8 @@ ORA-12899: "JAVA"."HOBBY"."HOBBY_EXPLAIN" 열에 대한 값이 너무 큼(실제
 
 SQL> insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby_place) values(5,'맛집 탐방', '맛있는 음식은 정신건강에 이롭다.','시간 미지정','맛집');
 
-1 개의 행이 만들어졌습니다.
+1 개의 행이 만들어졌습니다
 
 SQL> commit;
 
-커밋이 완료되었습니다..
+커밋이 완료되었습니다
