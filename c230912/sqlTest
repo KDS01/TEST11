@@ -1,0 +1,492 @@
+SQL> create table student (
+  2  idnumber number(5,0) constraint pk_idnumber Primary key,
+  3  name varchar2(20),
+  4  nickname varchar(20),
+  5  password varchar(20),
+  6  age number(10,0),
+  7  gitaddress varchar(100));
+
+
+SQL> create table hobby(
+  2  hobby_id number(10,0) constraint pk_hobby_id primary key,
+  3  hobby_name varchar2(30),
+  4  hobby_explanation varchar2(100),
+  5  hobby_usetime number(10,0),
+  6  hobby_place varchar(30));
+
+테이블이 생성되었습니다.
+
+
+SQL> select * from student;
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         5 한상윤
+hsy
+qwer1234                                         37
+https://github.com/Natseol
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         1 김동선
+KDS
+qwer                                             29
+https://github.com/KDS01
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         4 박정완
+pjw
+qwer                                             27
+https://github.com/pjw222/HomeWork2
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         6 임현규
+TLM
+486                                              27
+https://github.com/mabiTLM/Java4
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         3 권원준
+oooonx
+may                                              22
+https://github.com/KWWWJ/just1.git
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         2 이민규
+qq752
+1234                                             23
+https://github.com/LEEMINGYU28/Java4.git
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         7 김남균
+knk
+1234                                             27
+https://github.com/LiamKim-0218/HomeWork2
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         8 임주한
+LJH
+3232                                             32
+https://github.com/Juhan008/java-D
+
+
+8 행이 선택되었습니다.
+
+SQL> select nickname from student;
+
+NICKNAME
+----------------------------------------
+hsy
+KDS
+pjw
+TLM
+oooonx
+qq752
+knk
+LJH
+
+8 행이 선택되었습니다.
+
+SQL> select gitaddress from student;
+
+GITADDRESS
+--------------------------------------------------------------------------------
+https://github.com/Natseol
+https://github.com/KDS01
+https://github.com/pjw222/HomeWork2
+https://github.com/mabiTLM/Java4
+https://github.com/KWWWJ/just1.git
+https://github.com/LEEMINGYU28/Java4.git
+https://github.com/LiamKim-0218/HomeWork2
+https://github.com/Juhan008/java-D
+
+8 행이 선택되었습니다.
+
+SQL> select * from student where name in('김');
+
+선택된 레코드가 없습니다.
+
+SQL> select * from student where name like '%김%';
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         1 김동선
+KDS
+qwer                                             29
+https://github.com/KDS01
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         7 김남균
+knk
+1234                                             27
+https://github.com/LiamKim-0218/HomeWork2
+
+
+SQL> select * from student order by age desc;
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         5 한상윤
+hsy
+qwer1234                                         37
+https://github.com/Natseol
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         8 임주한
+LJH
+3232                                             32
+https://github.com/Juhan008/java-D
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         1 김동선
+KDS
+qwer                                             29
+https://github.com/KDS01
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         4 박정완
+pjw
+qwer                                             27
+https://github.com/pjw222/HomeWork2
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         6 임현규
+TLM
+486                                              27
+https://github.com/mabiTLM/Java4
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         7 김남균
+knk
+1234                                             27
+https://github.com/LiamKim-0218/HomeWork2
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         2 이민규
+qq752
+1234                                             23
+https://github.com/LEEMINGYU28/Java4.git
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         3 권원준
+oooonx
+may                                              22
+https://github.com/KWWWJ/just1.git
+
+
+8 행이 선택되었습니다.
+
+SQL> commit;
+
+커밋이 완료되었습니다.
+
+SQL> select * student order by name asc;
+select * student order by name asc
+         *
+1행에 오류:
+ORA-00923: FROM 키워드가 필요한 위치에 없습니다.
+
+
+SQL> select * from student order by name asc;
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         3 권원준
+oooonx
+may                                              22
+https://github.com/KWWWJ/just1.git
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         7 김남균
+knk
+1234                                             27
+https://github.com/LiamKim-0218/HomeWork2
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         1 김동선
+KDS
+qwer                                             29
+https://github.com/KDS01
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         4 박정완
+pjw
+qwer                                             27
+https://github.com/pjw222/HomeWork2
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         2 이민규
+qq752
+1234                                             23
+https://github.com/LEEMINGYU28/Java4.git
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         8 임주한
+LJH
+3232                                             32
+https://github.com/Juhan008/java-D
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         6 임현규
+TLM
+486                                              27
+https://github.com/mabiTLM/Java4
+
+
+  IDNUMBER NAME
+---------- ----------------------------------------
+NICKNAME
+----------------------------------------
+PASSWORD                                        AGE
+---------------------------------------- ----------
+GITADDRESS
+--------------------------------------------------------------------------------
+         5 한상윤
+hsy
+qwer1234                                         37
+https://github.com/Natseol
+
+
+8 행이 선택되었습니다.
+
+SQL> commit;
+
+커밋이 완료되었습니다.
+
+SQL> create table hobby(
+  2     hobby_id number(10,0) constraint pk_hobby_id primary key,
+  3     hobby_name varchar2(25),
+  4     hobby_explain varchar2(50),
+  5     hobby_date date default systimestamp,
+  6     hobby_usetime varchar2(30),
+  7     hobby_place varchar2(30)
+  8     );
+
+테이블이 생성되었습니다.
+
+SQL> insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby_place) values(1,'스키', '스키장 가고싶 다','4시간 30분','스키장');
+
+1 개의 행이 만들어졌습니다.
+
+SQL>  commit;
+
+커밋이 완료되었습니다.
+
+SQL> insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby_place) values(2,'게임', '온라인 게임이 최고지','6시간','집,피시방');
+
+1 개의 행이 만들어졌습니다.
+
+SQL> insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby_place) values(3,'축구', '구기 종목의 대표주자','2시간 30분','축구장');
+
+1 개의 행이 만들어졌습니다.
+
+SQL> insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby_place) values(4,'농구', '농구가..하고..싶어요.','2시간','농구장');
+
+1 개의 행이 만들어졌습니다.
+
+SQL> insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby_place) values(5,'맛집 탐방', '맛있는 음식을 먹는 것은 건강에 이롭다.','시간 미지정','맛집');
+insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby_place) values(5,'맛집 탐방', '맛있는 음식을 먹는 것은 건강에 이롭다.','시간 미지정','맛집')
+                                                                                                              *
+1행에 오류:
+ORA-12899: "JAVA"."HOBBY"."HOBBY_EXPLAIN" 열에 대한 값이 너무 큼(실제: 54,
+최대값: 50)
+
+
+SQL> insert into hobby(hobby_id, hobby_name, hobby_explain, hobby_usetime, hobby_place) values(5,'맛집 탐방', '맛있는 음식은 정신건강에 이롭다.','시간 미지정','맛집');
+
+1 개의 행이 만들어졌습니다.
+
+SQL> commit;
+
+커밋이 완료되었습니다.
