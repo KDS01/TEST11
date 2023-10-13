@@ -162,7 +162,7 @@
 
 	
 
-      <Context docBase="classWeb" path="/classWeb" reloadable="true" source="org.eclipse.jst.jee.server:classWeb"/><Context docBase="Deep_sleep" path="/Deep_sleep" reloadable="true" source="org.eclipse.jst.jee.server:Deep_sleep"/></Host>
+      <Context docBase="classWeb" path="/classWeb" reloadable="true" source="org.eclipse.jst.jee.server:classWeb"/><Context docBase="Deep_sleep1" path="/Deep_sleep1" reloadable="true" source="org.eclipse.jst.jee.server:Deep_sleep1"/></Host>
     </Engine>
   </Service>
 </Server>
