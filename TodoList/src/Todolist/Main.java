@@ -14,6 +14,10 @@ import java.util.TreeMap;
 
 public class Main {
 	public static void main(String[] args) {
+//		TodoList temp = new TodoList("밥" , 3,"밥먹기");
+//		
+//		TodoList[] arr = new TodoList[] {temp, TodoList("테스트중", 3, "테스팅")};
+		
 		TreeMap<Integer,String> treemap = new TreeMap<>(Collections.reverseOrder());
 		TodoList a = new TodoList();
 		HashSet<String> set = new HashSet<>();

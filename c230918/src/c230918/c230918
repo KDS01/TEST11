@@ -1,0 +1,119 @@
+	##네트워크란? 
+		서버끼리의 연결
+	##서버란? 
+		외부에서 접근 가능한 컴퓨터
+	##포트란? 
+		외부에서 접근할 수 있도록 열어두는 문
+	##대표적인 포트
+		80 :HTTP => 웹 프로토콜
+		443 : HTTPS => 인증된 웹 프로토콜
+		22 : SSH
+		1521 : Oracle
+		3341 : mySQL
+	##도메인이란?
+		- 배포할 때 접근하기 쉽게 하기 위해서 사용하는 주소(영어로)
+		- 최하위, 하위, 상위, 최상위(com|org|net|kr등)
+		- co.kr pe.kr
+	## HTTP 
+	- HyperText Transfer Protocol
+	- 브라우저에서 통신하는 규칙
+	## HTTPS
+	- HTTP + secure
+	- 인증된 HTTP 통신
+	- SSL 인증 방식을 사용한다
+		-Let'sEncrypyto | certbot
+		-AWS에서는 호스팅 영역이 있을 시 자동 인증 지원(유로)
+	## HTML 
+	- HT MARKUP LANGUAGE
+	- 웹페이지의 출력 담당, 구조만 있을 뿐, 플로우는 없다.
+	<HTML>
+		<title>HTML이란</title>
+	</head>
+	<body>
+		<div>
+		어쩌구 저쩌구
+		</div>
+	</body>
+	</html>대충 이런 형식
+	
+	##CSS
+	- CasCading Style Sheets
+	- 웹페이지의 모양을 담당한다.
+
+	##JAVASCRIPT
+	- 웹페이지의 로직을 담당한다.
+	-java와는 이름만 연관있다.
+	
+	
+	<html>
+		<head>
+			<title>제목</title>
+			<script>
+				java스크립트입력~
+			</script>
+			<script scr ="자바스크립트 파일의 주소"></script>
+			<style>
+			css 내용 입력
+			</style>
+			<link href="CSS파일 주소"rel="stylesheet" /> -> /가 뒤에 있는 이유 : 내용이 없으니까 닫아버려라
+		</head>
+		<body>
+			<div>
+				내용~
+			</div>
+		</body>
+	</html>
+	
+	#java에서의 web server Open
+	-Tomcat을 사용한다.
+	
+	#server
+	##web server
+	- 요청을 했을 때 웹을 주는 서버
+	##Application Server
+	- 요청을 했을 때 data를 주는 서버(객체 형식으로 된 데이터) 
+	##DB server
+	
+	## Web Application server
+	- WAS => 웹도 주고 데이터도 주는 서버
+	
+	#Tomcat
+	- Apache를 기반으로 돌아가는 서버 프로그램
+	- PHP로 되어 있다.
+	- WAS  
+	
+	#Apache
+	- HTML만 or 파일 자체만 주고 받는 웹 서버
+	- Web Server
+	- PHP를 사용해서 WAS처럼 쓸 수 있다
+	
+	#javascript
+	- javascript는 인터 프린터 언어, 세상에서 가장 빠른 프로그래밍 언어(C보다는 느릴수도 있음)
+	- OS상에서 사용하는 것이 아닌, 브라우저 상에서 사용하는 것을 기본으로 하고 있다.
+	- Node.js << OS에서 자바스크립트를 실행할 수 있게 해준다.
+	- Node.js를 기반으로 React 라이브러리를 사용할 수 있다.
+	- React 라이브러리는 view만을 위한 자바스크립트 라이브러리
+	- 이외에도 vue.js , Angular.js라는 프레임워크가 있다.
+		-Angular.js는 죽었다.
+		-React vs Vue.js 구도
+	- 위 내용은 순수 frontEnd(웹서버)쪽 기술이다.
+	- Node.js를 사용한 백엔드 가능
+	
+	#OSI 7계층 | TCP&IP 5계층
+	- 데이터를 버퍼로 바꿔서 통신하는 단계
+	- 7층(5층) HTTP , web Socket(HTTP 통신을 이용한 socket 통신)
+		- 요청과 응답으로 1:1 매칭이 되어있는 통신
+		- socket 통신 기반
+		- 요청과 응답을 주고 받으면, 연결을 끊어버림
+	- 6층(4층) socket 통신
+		- 데이터를 항상 조건없이 마음대로 주고 받을 수 있다.
+		- 한 서버만 계속해서 데이터를 주고 받을 수도 있다.(제약 X)
+	- 5층(3층) TCP | UDP
+		- TCP 는 수신가능 확인 -> 송신 -> 수신 -> 수신여부 발송
+		- UDP는 송신 끝
+		- UDP 장점 => 빠르다. 대신 수신여부를 확인할 수 없다
+		
+	- 4층 IP통신
+	
+	#TomCat실행
+	- Windows : Tomcat9/bin/tomcat9.exe

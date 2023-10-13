@@ -10,6 +10,13 @@ class TodoList{
 		this.Explanation=Explanation;
 		this.priority=priority;
 	}
+	@Override
+	public String toString() {
+		return "제목 : " + name + "\n우선도 : " + "\n내용 : " +Explanation;
+	}
+	public String toList() {
+		return name + " = "+ priority;
+	}
 	public int getPriority() {
 		return priority;
 	}
@@ -31,7 +38,20 @@ class TodoList{
 	public void setExplanation(String Explanation) {
 		this.Explanation=Explanation;
 	}
+	// public void add(int priority, String name, String explanation)
+	//if(hashList.get(Name) != null)   => name의 해쉬코드가 비어있지 않다면,
+	//system out println("중복이야");
+	//throw new Exception("중복이얌);
+	//StringBuilder sb = new StringBuilder() {
+	//Iterator<Integer> treeIt => treeList.keySet().iterator
+	//while(treeIt.hasNext()) {// treeIt의 다음이 있는 경우
+	//		List<TodoList> tempList = treeList.get(treeIt.next)); =>
+			//for(TodoList item : tempList) {
+			// sb.append("\n");
+			//sb.append(item.toList);
 	
+	//public TodoItem getItem(String title) {
+				
 	
 }
 //	private K key;
