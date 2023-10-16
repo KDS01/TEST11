@@ -57,5 +57,6 @@
             </h4>
         </button>
     </form>
+    <script src="/test/scripts/stage1.js"></script>
 </body>
 </html>

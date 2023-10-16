@@ -43,7 +43,7 @@
             border-radius: 15px;
         }
         body{
-            background-image:url('/Deep_sleep/deep_sleep/images/stage2.png');
+            background-image:url('/Deep_sleep1/deep_sleep/images/stage2.png');
             background-repeat: no-repeat;
             background-size: 1800px;
         }
@@ -194,7 +194,7 @@
     <div class="mainRoomDoor" onclick=""></div>
     <div class="sink" onclick=""></div>
 
-    <form action="/Deep_sleep/deep_sleep/stage3/index.jsp">
+    <form action="/Deep_sleep1/deep_sleep/stage3/index.jsp">
         <button class="temp">임시버튼</button>
     </form>
     <div id="modal" class="modal">
@@ -211,7 +211,7 @@
             <button id="close-modal2">돌아가기</button>
         </div>
     </div>
-    <script src="/Deep_sleep/deep_sleep/scripts/stage1.js"></script>
+    <script src="/Deep_sleep1/deep_sleep/scripts/stage1.js"></script>
 
 </body>
 </html>

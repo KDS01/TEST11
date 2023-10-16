@@ -98,10 +98,10 @@
     <div class="upstair" onclick=""></div>
     <div class="downstair" onclick=""></div>
 
-    <form action="/Deep_sleep/deep_sleep/stage4/trueEnding.jsp">
+    <form action="/Deep_sleep1/deep_sleep/stage4/trueEnding.jsp">
         <button class="temp">임시버튼</button>
     </form>
-    <script src="/Deep_sleep/deep_sleep/scripts/stage1.js"></script>
+    <script src="/Deep_sleep1/deep_sleep/scripts/stage1.js"></script>
 
 </body>
 </html>

@@ -43,7 +43,7 @@
             border-radius: 15px;
         }
         body{
-            background-image:url('/Deep_sleep/deep_sleep/images/trueEnding.png');
+            background-image:url('/Deep_sleep1/deep_sleep/images/trueEnding.png');
             background-repeat: no-repeat;
             background-size: 1800px;
             
@@ -95,9 +95,9 @@
     <div class="upstair" onclick=""></div>
     <div class="downstair" onclick=""></div>
 
-    <form action="/Deep_sleep/deep_sleep/stage1/index.jsp">
+    <form action="/Deep_sleep1/deep_sleep/stage1/index.jsp">
         <button class="temp">임시버튼</button>
     </form>
-    <script src="/Deep_sleep/deep_sleep/scripts/stage1.js"></script>
+    <script src="/Deep_sleep1/deep_sleep/scripts/stage1.js"></script>
 </body>
 </html>

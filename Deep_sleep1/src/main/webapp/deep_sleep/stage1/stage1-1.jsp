@@ -44,7 +44,7 @@
             border-radius: 15px;
         }
         body{
-            background-image:url('/Deep_sleep/deep_sleep/images/stage1BackGround.jpg');
+            background-image:url('/Deep_sleep1/deep_sleep/images/stage1BackGround.jpg');
             background-repeat: no-repeat;
             background-size: 1800px;
         }
@@ -171,11 +171,11 @@
     </style>
 </head>
 <body style="background-color:  black;">
-    <button type="button"id="linebox" class="linesbox z-index: 1;">
-        대사 배열 하나씩 띄우기<br>
-    </button>
+    <div class="linesbox" id="linebox" style="z-index: 1;">
+    	일단 문을 열고 생각해보자
+    </div>
     <div class="namebox"style="z-index: 2;">
-        이름박스
+        ???
     </div>
     <ul class="menubox">
         <li>
@@ -187,11 +187,11 @@
         </li>
     </ul>
 
-    <div class="door" onclick='frontDoor()'></div>
+    <div class="door" onclick='narrator(frontDoor)'></div>
     <div class="doorLock" onclick=""></div>
     <div class="upstair" onclick=""></div>
     <div class="downstair" onclick=""></div>
-    <form action="/Deep_sleep/deep_sleep/stage1/stage1-2.jsp">
+    <form action="/Deep_sleep1/deep_sleep/stage1/stage1-2.jsp">
         <button class="temp">임시버튼</button>
     </form>
         <div id="modal" class="modal">
@@ -209,7 +209,7 @@
             </div>
         </div>
 
-    <script src="/Deep_sleep/deep_sleep/scripts/stage1.js"></script>
+    <script src="/Deep_sleep1/deep_sleep/scripts/stage1.js"></script>
    
 </body>
 </html>
