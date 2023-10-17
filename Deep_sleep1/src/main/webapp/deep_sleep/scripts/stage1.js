@@ -44,36 +44,52 @@ let S1Ending=
 			"그래도 문은 열었네... 이만 집에 들어가자...",
 			"[Stage 1] CLEAR"
 		];
-let frontDoor=
+let frontDoorLines=
 			[
 				"늘 보던 현관문이다.",
-				" 이걸 빨리 열어야 집에 들어가서 쉴 수 있을텐데..."
-			];   
+				" 이걸 빨리 열어야 집에 들어가서 쉴 수 있을텐데...",
+				""
+			]; 
+let doorLockLines=
+			[
+				"\"혹시 배터리가 다 닳아서 안되는걸까?\"",
+				"그럼 배터리만 가지고 있으면  간단히 해결할 수 있지 않은가?",
+				"생각난김에 옆에 메고있던 에코백을 급하게 뒤져봤지만 배터리를 상시로 갖고 다니는 사람이 얼마나 있을까",
+				"\"환장하겠네!! 진짜!!!!\"",
+				"\'단서 : 도어락\' 을 획득하셨습니다.",
+				""
+			];
+let upstairLines= 
+			[
+				"계단 위쪽에서는 아무런 소리도 들려오지 않는다.",
+				" 누가 도와주지 않으려나..",
+				""
+			]
+let downstairLines=
+			[
+				"내가 올라온 계단이다.",
+				"딱히 특별한 점은 보이지 않는다.",
+				""
+			]
+				 
 let arr=[];
 let count=0;
 
-
-function frontDoor(){
-    alert("늘 보던 현관문이다.");
-}
-function doorLock(){
-    alert("도어락 대사")
-}
 function getLines(){
     return lines;
 }
-function narrator(arr1){
+function narrator(arr) {
 	let text=document.getElementById('linebox').innerHTML;
-	
     const el=document.getElementsByClassName('linesbox')
     el.onclick=new function(){
-        document.getElementById('linebox').innerHTML=arr1[count];
+        document.getElementById('linebox').innerHTML=arr[count];
         }
     count++;
-    if(arr1[count]==null){
+   	if(arr[count]==null){
 		document.getElementById('linebox').innerHTML=text;
+		count=0;
 	}
-	
+ 
 }
 function toNextStage(arr1){
     const el=document.getElementsByClassName('linesbox')
@@ -82,12 +98,15 @@ function toNextStage(arr1){
         }
     count++;
     if(arr1[count]==null&&arr1==stage1Start){
+		count=0;
 		window.location.href="/Deep_sleep1/deep_sleep/stage1/stage1-1.jsp"
 	}
 	else if(arr1[count]==null&&arr1==stage1Organize){
+		count=0;
 		window.location.href="/Deep_sleep1/deep_sleep/stage1/stage1-2.jsp"
 	}
 	else if(arr1[count]==null&&arr1==S1Ending){
+		count=0;
 		window.location.href="/Deep_sleep1/deep_sleep/stage2/index.jsp"
 	}
  }

@@ -187,10 +187,10 @@
         </li>
     </ul>
 
-    <div class="door" onclick='narrator(frontDoor)'></div>
-    <div class="doorLock" onclick=""></div>
-    <div class="upstair" onclick=""></div>
-    <div class="downstair" onclick=""></div>
+    <div class="door" onclick='narrator(frontDoorLines)'></div>
+    <div class="doorLock" onclick="narrator(doorLockLines)"></div>
+    <div class="upstair" onclick="narrator(upstairLines)"></div>
+    <div class="downstair" onclick="narrator(downstairLines)"></div>
     <form action="/Deep_sleep1/deep_sleep/stage1/stage1-2.jsp">
         <button class="temp">임시버튼</button>
     </form>
