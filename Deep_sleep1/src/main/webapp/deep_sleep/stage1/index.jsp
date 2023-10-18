@@ -92,7 +92,7 @@
     <div class="namebox"style="z-index: 2;">
         이름박스
     </div>
-    <div class="linesbox" id="linebox" style="z-index: 1;" onclick='narration(stage1Start,toStage1_1)'>
+    <div class="linesbox" id="linebox" style="z-index: 1;" onclick=''>
     	진행하려면 여기를 클릭하세요
     </div>
     <form action="/Deep_sleep1/deep_sleep/stage1/stage1-1.jsp">
