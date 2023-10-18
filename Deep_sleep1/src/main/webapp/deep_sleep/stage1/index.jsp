@@ -89,13 +89,13 @@
     <div class="namebox"style="z-index: 2;">
         이름박스
     </div>
-    <div class="linesbox" id="linebox" style="z-index: 1;" onclick='toNextStage(stage1Start)'>
+    <div class="linesbox" id="linebox" style="z-index: 1;" onclick='narration(stage1Start,toStage1_1)'>
     	진행하려면 여기를 클릭하세요
     </div>
     <form action="/Deep_sleep1/deep_sleep/stage1/stage1-1.jsp">
         <button class="temp">임시버튼</button>
     </form>
     
-   	<script src="/Deep_sleep1/deep_sleep/scripts/stage1.js"></script>
+   	<script src="/Deep_sleep1/src/main/webapp/deep_sleep/scripts/narrator/narrator.js"></script>
 </body>
 </html>

@@ -89,7 +89,6 @@ function narrator(arr) {
 		document.getElementById('linebox').innerHTML=text;
 		count=0;
 	}
- 
 }
 function toNextStage(arr1){
     const el=document.getElementsByClassName('linesbox')
@@ -113,7 +112,6 @@ function toNextStage(arr1){
 
 function provisos(){
     let a=document.getElementById("submenu");
-
 }
 const modal = document.getElementById("modal");
 const openModalBtn = document.getElementById("open-modal");
