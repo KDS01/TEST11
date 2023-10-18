@@ -40,21 +40,27 @@ narratorObj.getLine = narratorObj.getLine.bind(narratorObj);
 
 
 
-/*class narration{
+class narration{
 	tostage;
 	toNextStage();
 	lines=[];
 	stage;
 	count=0;
-	constructor(stage,lines){
-		this.lines=lines;
-		this.stage=stage;
-	}
 	constructor(stage,lines,tostage){
 		this.lines=lines;
 		this.stage=stage;
 		this.tostage=tostage;
-		}
+		};
+	getLines(){
+		return this.lines;
+	}
+	getToStage(){
+		return this.tostage;
+	}
+	getLines(){
+		 if (this.count < this.narratorLines.length)
+         return narratorElem.innerHTML = this.narratorLines[this.count++];
+	}
+	
 	
 }
-*/
