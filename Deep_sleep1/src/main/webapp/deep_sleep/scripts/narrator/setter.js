@@ -7,6 +7,7 @@ const toStage3_1=window.location.href=""
 const toStage3_2=window.location.href=""
 
 
+
 function setLines(lines){
 	narratorObj.narratorLines=lines;
 }

@@ -30,7 +30,7 @@ function narrator(){
 function narration(lines,toStage){
 	setLines(lines);
 	setNextstage(toStage);
-	narratorObj.getLine;
+	narratorElem.onclick=narratorObj.getLine;
 }
 	
 
