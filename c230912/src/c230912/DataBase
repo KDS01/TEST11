@@ -1,0 +1,156 @@
+#DataBase 
+- 자료를 저정하는 곳
+- 데이터를 정리하는 곳
+- 저장한 자료를 찾는 곳
+- 쉽게 말해서 데이터의 창고라고 생각할 수 있다
+- 종류는?
+- 	noSQL
+	- 크게 정해진 규격이 없다.
+	- MongoDB, Redis 등
+-	SQL,RBDMS
+	- 쓰려면 규격에 맞춰야 한다.
+	- 제대로 쓰려면 좀 어렵다.
+	- Oracle, mySQL 등
+## SQL이란?
+	- Language << DB랑 대화한다.
+	- Structured Query Language(말 그대로 규격화를 시켜주는 언어다.)
+## 데이터베이스 조작어//명령어	
+	- create(구조를 생성한다)
+	- create table test
+	- drop(구조를 삭제한다)
+	- alter(구조를 수정한다)
+	- rename(테이블 명 수정)
+	-
+## 데이터 조작어
+	- insert(넣는다)
+		insert into table명 (컬럼명, 컬럼명, 컬럼명...) values (값, 값, 값, 값....)
+	- update(수정한다,덮어씌운다)
+		update 테이블명 set 컬럼명 = 값 , 컬럼명 = 값,.... where 조건;
+	- delete(삭제)
+		-delete 컬럼명 from 테이블명 where 조건;
+	- select(선택)
+		-select 컬럼명 from 테이블명;
+	
+##유저 조작어
+	- grant(접근 권한 부여)
+	- revoke(권한 박탈)
+	
+## Type
+	- DB에서는 참조 타입이 존재하지 않음
+	- 원시 타입만이 존재.
+	
+##숫자	
+	- Integer => number
+	- Double, float  => float 
+	
+##문자	
+	- Char => Char => 고정길이, Max :20000byte
+	- VarChar2 => Var이 들어가면 , 가변길이, max 4000byte
+	- NChar => N이 붙은 것들은 유니코드 텍스트
+	- NVarChar => N이 붙은 것들은 유니코드 텍스트,=> Var이 들어가면 , 가변길이
+	- String => Long => 길이에 대한 조건이 없다. max : 2GB
+	- Clob => Long보다 크다. 4GB
+	- NClob => N이 붙은 것들은 유니코드 텍스트
+	
+##기타	
+	- Date => 날짜
+	- Timestamp => 시간(기간)
+	
+## 테이블 생성
+	-이름, 타입, 데이터 길이를 정한다
+	-number(10,8) => number는 (10의 자릿수까지만 넣을 수 있다, 소숫점 아래 8자리까지 넣을 수 있다)
+	-Float(10) => (전체 길이만 표현하면 된다)
+	-Char(10) => 1글자만 넣어도 10칸을 차지함
+	-VarChar(10) => 1글자만 넣을 시 1칸만 차지함
+	-Long => 길이에 대한 조건이 없으므로.
+	
+	 
+## DB 
+	- 데이터를 어떻게 저장을 할까?
+	- 방대한 공간(데이터베이스, 스키마) 생성.
+	- DB에 속하는 테이블을 생성한다.
+	- 생성한 테이블에 데이터를 넣는다.
+	- 생성한 테이블에서 데이터를 가져온다.
+	- 테이블(표)
+	- 테이블 헤드 : [이름 		종류		가격		판매자		설명]
+	- 데이터를 효율적으로 저장하기 위해서.
+
+## RDBMS란?
+	- Relational DataBase Management System
+	- 관계형 데이터 베이스
+## 비관계형 데이터 베이스
+	- noSQL 전체
+
+## Oracle
+	- 보통의 데이터베이스는 유저와, 데이터베이스가 따로 있는데,
+	- Oracle의 경우는 유저가 곧 데이터베이스이다.
+	
+	
+## SQL> create table test
+  	2  (id number(10, 0),
+  	3  name varchar(10),
+  	4  score number(10,5)),
+  	5  address varchar(30);
+  	
+#### Option
+	#### NOT NULL => (NULLABLE)
+	#### UNIQUE : 중복체크
+		- 보통 NOT NULL이랑 같이 쓴다.
+	#### DEFAULT : 기본값
+	#### CONSTRAINT : 제약을 걸어준다(이게 primary key라는 제약 조건을 걸어준다)
+	
+	#### PRIMARY KEY : 기본 키
+		- 테이블의 유일한 컬럼
+		- NOT NULL + UNQUE(중복될 수도 없고, 비워둘 수도 없다)
+		- 보통 관계를 맺을 떄 쓴다
+	#### FOREIGN KEY :  외래 키
+		- 관계를 맺을 때 쓴다.
+		- 관계에 대한 이름(무슨 관계인가?)
+	#### 
+	SQL> create table test2 (
+  	  id number(10, 0) CONSTRAINT pk_id PRIMARY KEY,
+  	 name varchar2(10) not null,
+  	 score number(10,5) default 0,
+  	 address varchar(30));
+  	 
+  	 //오늘의 과제
+  	 student table 만들기
+  	 - id,이름,아이디,비밀번호,나이,깃주소
+  	 - 이름순, 나이 순으로 출력하기
+  	 hobby 테이블 만들기
+  	 - id, 이름,설명,등록일,평균 소요 시간, 장소
+  	 
+  create table student (
+   idnumber number(5,0) constraint pk_idnumber Primary key,
+   name varchar2(5) not null,
+   nickname varchar(10) not null,
+   password varchar(15) not null,
+   age number(10,0) default 0,
+   gitaddress varchar(100) not null);
+   
+   
+   	create table test3 (
+  	 id number(10, 0),
+  	 name varchar2(10),
+  	 score number(10,5),
+  	 address varchar2(30),
+  	 created_at timestamp default to_date(sysdate, 'yyyy/mm/dd/hh:mi:ss')
+  	 );
+create table student (
+idnumber number(5,0) constraint pk_idnumber Primary key,
+name varchar2(20),
+nickname varchar(20),
+password varchar(20),
+age number(10,0),
+gitaddress varchar(100));
+
+create table hobby(
+   hobby_id number(10,0) constraint pk_hobby_id primary key,
+   hobby_name varchar2(25),
+   hobby_explain varchar2(50),
+   hobby_date date default systimestamp,
+   hobby_usetime varchar2(30),
+   hobby_place varchar2(30)
+   );
+  
+   

@@ -1,0 +1,10 @@
+#Spring Framework
+
+	-Library
+		-Oracle JDBC
+		-Servlet
+		-Tomcat DBCP
+	-FrameWork vs Library
+		-둘 다 규칙과 사용법이 있음.
+		-frameWork는 필요한 모든 것이 포함되어 있다.
+		

@@ -1,0 +1,65 @@
+# 클라이언트란?
+	-객체? 요청자
+	-스마트폰 - > 크롬, 엣지,파폭 등등의 브라우저
+# 통신 순서?
+	
+	- 클라이언트 <-> Web server <-> Application server <-> DB server 
+# java에서의 통신 순서
+
+-client <-> web server(TOMCAT) <-> WAS <-> DB server
+- WAS <-> Servlet(container, 도메인 주소, ip 주소)
+
+# JSP , Servlet
+	- JSP란?
+	- Java server page
+
+## HTTP 통신의 종류 / RESTFUL API
+	- GET : 단순 데이터 요청 응답
+		- GET 형식으로 써왔다.
+		- 브라우저에서 사용
+	- POST : 우편( 데이터를 보낼 때 사용한다)
+		- 데이터를 사용자가 볼 수 없게 가려준다.
+		- 로그인 패스워드 등등
+	- PUT : 서버에 데이터를 놓다.
+		- 데이터 가림
+	- PATCH : 서버의 데이터를 수정한다
+		- 데이터 가림
+		- put vs patch : put은 모든 데이터를 보낸다, patch는 일부 데이터만 보낸다
+	- DELETE : 데이터를 삭제한다
+		- GET과 같은 형식으로 데이터를 주고받는다
+	- OPTION :  조건(상대방이 나한테 데이터를 줄 수 있는가?)
+		- CORS : Cross Origin Resource Sharing
+		- 서로 다른 주소의 데이터를 주고 받는다.
+		
+	- 	사실상 다른 모든 것들은 POST 통신으로 대체가 가능하다
+	
+	#URL, URI
+		- URL : 흔히 얘기하는 인터넷 주소
+		- Uniform Resource Locator
+		- URI : 통합 자원 식별자
+		- Uniform Resource Identifier
+		- 사용 시에는 사실상 둘다 인터넷 주소라고 생각하면 된다.
+	#URL
+		- https://www.google.co.kr/?h1=ko
+			- https:// >> 프로토콜
+			- www.google.co.kr >> 도메인
+			- / >> 라우터 | 컨텍스트
+			- ?h1=ko >> 데이터, 쿼리 | 쿼리스트링
+				- h1 = ko 
+		- https://www.google.com/search?q=%EA%B5%AC%EA%B8%80&sca_esv=566330112&....
+			-{q= 구글; oq = 구글} 객체다
+		https://www.google.com/search?q=%EB%84%A4%EC%9D%B4%EB%B2%84&sc.....	
+# 데이터 전송 방법
+	- get 형식에서는 URL에 포함되어 데이터를 보낸다 >> 쿼리스트링
+	- post 형식에서는 데이터가 URL에 포함되지 않는다 >> 그렇다면 어디에 있는가? 'body' key
+	- body : {} >> JSON 형식을 많이 사용한다 		
+# Encoded URI
+	-%EA%B5%AC %EA%B8%80 >> 구글
+	-%EB%84%A4 %EC%9D%B4 %EB%B2%84 >> 네이버
+	-naver  >> naver
+# Encoding vs Decoding
+	- setcharacterEncoding("UTF-8")
+	
+## 암호화와 복호화
+	- 암호화==인코딩
+	- 복호화==디코딩

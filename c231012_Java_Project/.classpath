@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/com.springsource.net.sf.cglib-2.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/com.springsource.org.apache.commons.logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/ojdbc11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/org.springframework.asm-3.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/org.springframework.beans-3.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/org.springframework.context-3.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/org.springframework.core-3.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/org.springframework.expression-3.0.7.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/taglibs-standard-compat-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/taglibs-standard-spec-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/KGA/eclipse-workspace/workspace2/c231012_Java_Project/lib/tomcat-dbcp.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
