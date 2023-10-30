@@ -1,43 +1,37 @@
 package homework;
 
-public class BraveCookie {
-	int cookieLV =1;
-	int lowestHP =100;
-	int highestHP =110;
-	double nowHp;
-	String cookieClass ="C";
-	String[] meta = {"달리기 하면 나지!","마녀는 보이지 않는군… 이때다!","안 돼! 난 여기에서 빠져나가야겠어!","이대로 먹힐 수는 없어!","쿠키라고 무시하지 마!","너! 내 동료가 돼라!","용감한 쿠키가 튀어오르기를 사용했다! 아무일도 일어나지 않았다","탕수육은 부먹이지!"};
-	String[] accLv= {"용감함","조금 더 용감함","더 용감함","꽤 용감함","제법 용감함","최고 용감함","용감한데다 멋져","짱짱 용감함"};
-	String krName;
-	String jpName;
-	String cnName;
-	String twName;
-	String enName;	
-	double hitnum = 0;
-	void krName(String kr) 
+public class BraveCookie extends Cookies {
+	public BraveCookie() {}
+	private double maxHP=100;
+	private String cookieClass ="C";
+	private String[] lines = {"달리기 하면 나지!","마녀는 보이지 않는군… 이때다!","안 돼! 난 여기에서 빠져나가야겠어!","이대로 먹힐 수는 없어!","쿠키라고 무시하지 마!","너! 내 동료가 돼라!","용감한 쿠키가 튀어오르기를 사용했다! 아무일도 일어나지 않았다","탕수육은 부먹이지!"};
+	private String[] accLv= {"용감함","조금 더 용감함","더 용감함","꽤 용감함","제법 용감함","최고 용감함","용감한데다 멋져","짱짱 용감함"};	
+	public int hitnum = 0;
+	public String getKrName()
 	{
-		System.out.println("용감한 쿠키");
+		return ("용감한 쿠키");
 	}
-	void jpName(String jp) 
+	public String getJPName()
 	{
-		System.out.println("勇敢なクッキー君");
+		return ("勇敢なクッキー君");
 	}
-	void cnName(String cn)
+	public String getCNName()
 	{
-		System.out.println("勇敢饼干");
+		return ("勇敢饼干");
 	}
-	void twName(String tw)
+	public String getENName()
 	{
-		System.out.println("คุกกี้ผู้กล้าหาญ");
+		return ("Brave Cookie");
 	}
-	void enName(String en)
+	public String getTWName()
 	{
-		System.out.println("Brave Cookie");
+		return ("คุกกี้ผู้กล้าหาญ");
 	}
-	public void cookieHP()
-	{
-		double maxHp = lowestHP +((cookieLV-1)*1.25);
-		double nowHp = maxHp - (hitnum * 40);
+	public double MAXHP() {
+		return  lowestHP +((cookieLV-1)*1.25);
+	}
+	public double nowHP() {
+		return (maxHP - (hitnum * 40));
 	}
 	public void deadpoint()
 	{
@@ -50,10 +44,15 @@ public class BraveCookie {
 	{
 		return accLv[cookieLV-1];
 	}
-	public void meta()
+	public String[] getCookieLines()
 	{
-		int k =(int)(Math.random()*8);
-		System.out.println(meta[k]);
+		return lines;
+	}
+	public String getCookieClass() {
+		return cookieClass;
+	}
+	public int getHitNum() {
+		return hitnum;
 	}
 }
 
